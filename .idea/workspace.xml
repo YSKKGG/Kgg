@@ -4,21 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eb2cd97-b7a8-44fd-b311-f9d4b95faf51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-framwork/kkchat-common-starter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-framwork/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="2eb2cd97-b7a8-44fd-b311-f9d4b95faf51" name="Changes" comment="环境配置">
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/KkchatCustomApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/enums/WSReqTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/enums/WSRespTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/req/WSBaseReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/ChatMemberResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBaseResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSFriendApply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginSuccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginUrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMemberChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMessageRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMsgMark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMsgRecall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSOnlineOfflineNotify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-framwork/kkchat-common-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-framwork/kkchat-common-starter/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,19 +55,50 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.KkchatCustomApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/GitCode/KKChat/KKChat/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitCode\KKChat\KKChat\kkchat-chat-server\src\main\java\com\kgg\kkchat\common\websocket\domain\vo\resp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kgg.kkchat.common.websocket.domain.enums" />
+      <recent name="com.kgg.kkchat.common.websocket" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="KkchatCustomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="kkchat-chat-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="KkchatCustomApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.KkchatCustomApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -64,11 +114,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702967171709</updated>
-      <workItem from="1702967172721" duration="1086000" />
+      <workItem from="1702967172721" duration="9472000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1702968368889</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702968368889</updated>
+    </task>
+    <task id="LOCAL-00002" summary="环境配置">
+      <option name="closed" value="true" />
+      <created>1702968424338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702968424338</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="环境配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="环境配置" />
   </component>
 </project>
