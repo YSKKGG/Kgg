@@ -4,26 +4,99 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eb2cd97-b7a8-44fd-b311-f9d4b95faf51" name="Changes" comment="环境配置">
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/KkchatCustomApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/enums/WSReqTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/enums/WSRespTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/req/WSBaseReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/ChatMemberResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBaseResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBlack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSFriendApply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginSuccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginUrl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMemberChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMessageRead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMsgMark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSMsgRecall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSOnlineOfflineNotify.java" afterDir="false" />
+    <list default="true" id="2eb2cd97-b7a8-44fd-b311-f9d4b95faf51" name="Changes" comment="websocket模块">
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/annotation/RedissonLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/aspect/RedissonLockAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/config/CacheConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/config/RedissonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/config/ThreadPoolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/constant/RedisKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/dto/RequestInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/enums/YesOrNo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/vo/req/CursorPageBaseReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/vo/req/PageBaseReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/vo/resp/ApiResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/vo/resp/CursorPageBaseResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/domain/vo/resp/PageBaseResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/UserBlackEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/UserOnlineEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/UserRegisterEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserBlackListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserOnlineListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserRegisterListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/exception/CommonErrorEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/exception/ErrorEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/exception/HttpErrorEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/BlackInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/CollectorInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/service/LockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/thread/MyThreadFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/thread/MyUncaughtExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/AssertUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/RequestHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/SpElUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/config/WxMpConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/config/WxMpProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/controller/WxPortalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/entity/IpDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/entity/IpInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/BlackTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/IdempotentEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/ItemEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/ItemTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/RoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/enums/UserActiveStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/vo/req/BlackReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/vo/req/ModifyNameReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/vo/req/WearingBadgeReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/vo/resp/BadgeResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/domain/vo/resp/UserInfoResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/IpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/WXMsgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/adapter/TextBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/adapter/UserAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/cache/ItemCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/cache/UserCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/AbstractHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/LogHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/MsgHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/ScanHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/SubscribeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/IpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserBackpackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/WXMsgServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/MyHeaderCollectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/dto/WSChannelExtraDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/service/WebSocketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/service/adapter/WebSocketAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/service/impl/WebSocketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/mapper/user/BlackMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/mapper/user/ItemConfigMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/mapper/user/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/mapper/user/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/mapper/user/UserRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/test/java/com/kgg/kkchat/common/DaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kkchat-chat-server/src/test/java/com/kgg/kkchat/common/MPGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/KkchatCustomApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/KkchatCustomApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/NettyWebSocketServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBaseResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSBaseResp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginSuccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp/WSLoginSuccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-chat-server/src/main/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kkchat-framwork/kkchat-common-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kkchat-framwork/kkchat-common-starter/pom.xml" afterDir="false" />
     </list>
@@ -35,6 +108,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -42,9 +118,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2ZkXheLnLvhDaUwV0jLIQ0NsuuA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,47 +134,145 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.IpServiceImpl.executor": "Debug",
+    "Application.MPGenerator.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "JUnit.DaoTest.a1.executor": "Run",
+    "JUnit.DaoTest.executor": "Run",
+    "JUnit.DaoTest.jwt.executor": "Run",
+    "JUnit.DaoTest.redis.executor": "Run",
+    "JUnit.DaoTest.test.executor": "Run",
+    "JUnit.DaoTest.thread.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.KkchatCustomApplication (1).executor": "Run",
     "Spring Boot.KkchatCustomApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/GitCode/KKChat/KKChat/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/domain/vo/resp",
+    "last_opened_file_path": "E:/GitCode/KKChat/KKChat/kkchat-chat-server/src/main/resources/mapper/user",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kgg.kkchat.common.user.domain.entity" />
+      <recent name="com.kgg.kkchat.common.websocket" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitCode\KKChat\KKChat\kkchat-chat-server\src\main\resources\mapper\user" />
+      <recent name="E:\GitCode\KKChat\KKChat\kkchat-chat-server\src\main\java\com\kgg\kkchat\common\user\service" />
       <recent name="E:\GitCode\KKChat\KKChat\kkchat-chat-server\src\main\java\com\kgg\kkchat\common\websocket\domain\vo\resp" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitCode\KKChat\KKChat\kkchat-chat-server\src\main\resources\mapper\user" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.kgg.kkchat.common" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.kgg.kkchat.common.websocket.domain.enums" />
-      <recent name="com.kgg.kkchat.common.websocket" />
-      <recent name="" />
+      <recent name="com.kgg.kkchat.common.common.interceptor" />
+      <recent name="com.kgg.kkchat.common.common.event.listener" />
+      <recent name="com.kgg.kkchat.common.common.event" />
+      <recent name="com.kgg.kkchat.common.user.domain.enums" />
+      <recent name="com.kgg.kkchat.common.user.domain.vo.req" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="KkchatCustomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.KkchatCustomApplication (1)">
+    <configuration name="IpServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kgg.kkchat.common.user.service.impl.IpServiceImpl" />
       <module name="kkchat-chat-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="KkchatCustomApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kgg.kkchat.common.user.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MPGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kgg.kkchat.common.MPGenerator" />
+      <module name="kkchat-chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kgg.kkchat.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoTest.a1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kkchat-chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kgg.kkchat.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kgg.kkchat.common" />
+      <option name="MAIN_CLASS_NAME" value="com.kgg.kkchat.common.DaoTest" />
+      <option name="METHOD_NAME" value="a1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoTest.jwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kkchat-chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kgg.kkchat.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kgg.kkchat.common" />
+      <option name="MAIN_CLASS_NAME" value="com.kgg.kkchat.common.DaoTest" />
+      <option name="METHOD_NAME" value="jwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KkchatCustomApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="kkchat-chat-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kgg.kkchat.common.KkchatCustomApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kgg.kkchat.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.KkchatCustomApplication" />
+        <item itemvalue="Spring Boot.KkchatCustomApplication (1)" />
+        <item itemvalue="JUnit.DaoTest.jwt" />
+        <item itemvalue="Application.MPGenerator" />
+        <item itemvalue="Application.IpServiceImpl" />
+        <item itemvalue="JUnit.DaoTest.a1" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +291,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702967171709</updated>
-      <workItem from="1702967172721" duration="9472000" />
+      <workItem from="1702967172721" duration="10129000" />
+      <workItem from="1703077708668" duration="23779000" />
+      <workItem from="1703314386136" duration="8890000" />
+      <workItem from="1703324825789" duration="2360000" />
+      <workItem from="1703346612166" duration="5749000" />
+      <workItem from="1703405069525" duration="8986000" />
+      <workItem from="1709196698814" duration="694000" />
+      <workItem from="1709257135539" duration="8998000" />
+      <workItem from="1709283124680" duration="485000" />
+      <workItem from="1709283732382" duration="2772000" />
+      <workItem from="1709704020921" duration="13611000" />
+      <workItem from="1709719206097" duration="681000" />
+      <workItem from="1709728351867" duration="1499000" />
+      <workItem from="1709777094353" duration="17559000" />
+      <workItem from="1709878110843" duration="1516000" />
+      <workItem from="1709880179821" duration="9416000" />
+      <workItem from="1709909789483" duration="2592000" />
+      <workItem from="1709958226235" duration="322000" />
+      <workItem from="1709958712476" duration="18657000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -132,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702968424338</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="websocket模块">
+      <option name="closed" value="true" />
+      <created>1703005551523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703005551523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +355,166 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="环境配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="环境配置" />
+    <MESSAGE value="websocket模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="websocket模块" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/handler/SubscribeHandler.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/WXMsgServiceImpl.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/adapter/UserAdapter.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/WXMsgServiceImpl.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/service/impl/WebSocketServiceImpl.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/service/impl/WebSocketServiceImpl.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/TokenInterceptor.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/interceptor/TokenInterceptor.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/MyHeaderCollectHandler.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/websocket/MyHeaderCollectHandler.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/cache/ItemCache.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/utils/SpElUtil.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/aspect/RedissonLockAspect.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserRegisterListener.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserRegisterListener.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/dao/UserBackpackDao.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserBackpackServiceImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserBackpackServiceImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserBackpackServiceImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserOnlineListener.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/IpServiceImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/IpServiceImpl.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/user/service/impl/UserServiceImpl.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserBlackListener.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserBlackListener.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kkchat-chat-server/src/main/java/com/kgg/kkchat/common/common/event/listener/UserBlackListener.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.expression.spel.support.StandardEvaluationContext" memberName="variables" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
