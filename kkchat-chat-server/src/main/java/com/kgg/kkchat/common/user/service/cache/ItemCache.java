@@ -29,4 +29,9 @@ public class ItemCache {
 
     }
 
+    @Cacheable(cacheNames = "item", key = "'item:'+#itemId")
+    public ItemConfig getById(Long itemId) {
+        return itemConfigDao.getById(itemId);
+    }
+
 }

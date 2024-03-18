@@ -4,10 +4,10 @@ package com.kgg.kkchat.common.user.controller;
 import com.kgg.kkchat.common.common.domain.vo.resp.ApiResult;
 import com.kgg.kkchat.common.common.utils.AssertUtil;
 import com.kgg.kkchat.common.common.utils.RequestHolder;
+import com.kgg.kkchat.common.user.domain.dto.ItemInfoDTO;
+import com.kgg.kkchat.common.user.domain.dto.SummeryInfoDTO;
 import com.kgg.kkchat.common.user.domain.enums.RoleEnum;
-import com.kgg.kkchat.common.user.domain.vo.req.BlackReq;
-import com.kgg.kkchat.common.user.domain.vo.req.ModifyNameReq;
-import com.kgg.kkchat.common.user.domain.vo.req.WearingBadgeReq;
+import com.kgg.kkchat.common.user.domain.vo.req.*;
 import com.kgg.kkchat.common.user.domain.vo.resp.BadgeResp;
 import com.kgg.kkchat.common.user.domain.vo.resp.UserInfoResp;
 import com.kgg.kkchat.common.user.service.IRoleService;
@@ -41,7 +41,7 @@ public class UserController {
 
     @GetMapping("/uerInfo")
     @ApiOperation("获取用户信息")
-    public ApiResult<UserInfoResp> getUserInfo(HttpServletRequest request){
+    public ApiResult<UserInfoResp> getUserInfo(){
         return ApiResult.success(userService.getUserInfo(RequestHolder.get().getUid()));
     }
 
@@ -50,6 +50,18 @@ public class UserController {
     public ApiResult<Void> modifyName(@Valid @RequestBody ModifyNameReq modifyNameReq){
         userService.modifyName(RequestHolder.get().getUid(),modifyNameReq.getName());
         return ApiResult.success();
+    }
+
+    @PostMapping("/public/summary/userInfo/batch")
+    @ApiOperation("用户聚合信息-返回的代表需要刷新的")
+    public ApiResult<List<SummeryInfoDTO>> getSummeryUserInfo(@Valid @RequestBody SummeryInfoReq req) {
+        return ApiResult.success(userService.getSummeryUserInfo(req));
+    }
+
+    @PostMapping("/public/badges/batch")
+    @ApiOperation("徽章聚合信息-返回的代表需要刷新的")
+    public ApiResult<List<ItemInfoDTO>> getItemInfo(@Valid @RequestBody ItemInfoReq req) {
+        return ApiResult.success(userService.getItemInfo(req));
     }
 
     @GetMapping("/badges")

@@ -2,7 +2,6 @@ package com.kgg.kkchat.common.user.dao;
 
 import com.kgg.kkchat.common.user.domain.entity.Black;
 import com.kgg.kkchat.common.user.mapper.BlackMapper;
-import com.kgg.kkchat.common.user.service.IBlackService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,11 @@
 package com.kgg.kkchat.common.user.service;
 
+import com.kgg.kkchat.common.user.domain.dto.ItemInfoDTO;
+import com.kgg.kkchat.common.user.domain.dto.SummeryInfoDTO;
 import com.kgg.kkchat.common.user.domain.entity.User;
 import com.kgg.kkchat.common.user.domain.vo.req.BlackReq;
+import com.kgg.kkchat.common.user.domain.vo.req.ItemInfoReq;
+import com.kgg.kkchat.common.user.domain.vo.req.SummeryInfoReq;
 import com.kgg.kkchat.common.user.domain.vo.resp.BadgeResp;
 import com.kgg.kkchat.common.user.domain.vo.resp.UserInfoResp;
 
@@ -28,4 +32,8 @@ public interface UserService {
     void wearingBadge(Long uid, Long itemId);
 
     void black(BlackReq req);
+
+    List<SummeryInfoDTO> getSummeryUserInfo(SummeryInfoReq req);
+
+    List<ItemInfoDTO> getItemInfo(ItemInfoReq req);
 }

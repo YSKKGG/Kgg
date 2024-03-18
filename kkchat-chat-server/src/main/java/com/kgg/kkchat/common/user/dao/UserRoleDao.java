@@ -2,7 +2,6 @@ package com.kgg.kkchat.common.user.dao;
 
 import com.kgg.kkchat.common.user.domain.entity.UserRole;
 import com.kgg.kkchat.common.user.mapper.UserRoleMapper;
-import com.kgg.kkchat.common.user.service.IUserRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

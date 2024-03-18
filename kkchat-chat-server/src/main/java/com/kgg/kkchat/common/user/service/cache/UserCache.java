@@ -1,5 +1,7 @@
 package com.kgg.kkchat.common.user.service.cache;
 
+import com.kgg.kkchat.common.common.constant.RedisKey;
+import com.kgg.kkchat.common.common.utils.RedisUtils;
 import com.kgg.kkchat.common.user.dao.BlackDao;
 import com.kgg.kkchat.common.user.dao.ItemConfigDao;
 import com.kgg.kkchat.common.user.dao.UserRoleDao;
@@ -50,5 +52,10 @@ public class UserCache {
     @CacheEvict(cacheNames = "user", key = "'blackList'")
     public Map<Integer, Set<String>> evictBlackMap() {
         return null;
+    }
+
+    public List<Long> getUserModifyTime(List<Long> collect) {
+        List<String> keys = collect.stream().map(uid -> RedisKey.getKey(RedisKey.USER_MODIFY_STRING, uid)).collect(Collectors.toList());
+        return RedisUtils.mget(keys, Long.class);
     }
 }

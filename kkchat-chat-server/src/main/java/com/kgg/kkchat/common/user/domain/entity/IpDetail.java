@@ -13,6 +13,7 @@ import java.io.Serializable;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IpDetail implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String ip;
     private String isp;
     private String isp_id;
